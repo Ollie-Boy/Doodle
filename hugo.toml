@@ -1,6 +1,6 @@
 # Base URL for generating links on your site
 # Set this to the URL of your site
-baseURL = "https://example.com"
+baseURL = "https://doodle-jade.vercel.app/"
 
 # Basic metadata configuration for your site
 title = "Doodle"  # Title of your site
@@ -70,3 +70,4 @@ enableRobotsTXT = true
   home = ['html', 'rss']  # RSS feed for the home page
   section = ['html', 'rss']  # RSS feed for section pages
   term = ['html']  # No RSS feed for taxonomy/term pages
+
