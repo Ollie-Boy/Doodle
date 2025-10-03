@@ -1,0 +1,7 @@
+{{ $authorEmail := .Site.Params.author.email }}
+{{ range .Site.Menus.main }}
+  <a href="{{ .URL }}">{{ .Name }}</a>
+{{ end }}
+
+<a href="{{ "/index.xml" | relURL }}">RSS</a>
+<a href="mailto:{{ $authorEmail }}">Contact</a>

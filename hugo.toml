@@ -1,0 +1,72 @@
+# Base URL for generating links on your site
+# Set this to the URL of your site
+baseURL = "https://example.com"
+
+# Basic metadata configuration for your site
+title = "Doodle"  # Title of your site
+languageCode = "en-US"  # Language code for your site
+assetDir = "static"  # Directory for assets like images, stylesheets, etc.
+
+# Define how many posts should be displayed per page
+pagination.pagerSize = 11  # Show 11 posts per page
+
+# Enable support for emoji in your content
+enableEmoji = true
+
+# Site-wide copyright text for the built-in RSS template
+copyright = 'Copyright © {{ now.Format "2006" }} Ollie.'
+
+# Automatically generate a robots.txt file for SEO purposes
+enableRobotsTXT = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow raw HTML in Markdown files for custom content
+
+  [markup.highlight]
+    lineNos = false  # Disable line numbers in code blocks
+    lineNumbersInTable = false  # Disable line numbers in code block tables
+
+[params]
+  # Footer content (supports Markdown)
+  footer = '<i>Doodle is cool</i> B)'
+
+  # Website description for meta data
+  description = "I am cool B)"  # Description used in meta tags
+
+  # Path to your site's favicon (icon displayed in browser tab)
+  favicon = "/favicon/light/favicon.ico"  # Default favicon
+  favicon_dark = "/favicon/dark/favicon.ico"  # Favicon for dark mode
+
+  # Background images for your site (different for light/dark themes)
+  background_image = "/images/geometry_light.png"  # Light mode background
+  background_image_dark = "/images/geometry_dark.png"  # Dark mode background
+
+  # Social sharing images (used for Twitter, Slack, etc.)
+  images = ["images/Ollie.jpg"]
+
+  # Title used in the Open Graph structured data (used by social media for link previews)
+  title = "Doodle"
+
+  # Toggle for displaying "Made with Hugo" line at the bottom of the page
+  hideMadeWithLine = false  # Set to true to hide "Made with" line
+
+  # Toggle for displaying copyright information at the bottom of the page
+  hideCopyright = false  # Set to true to hide copyright text
+
+  # Customize the date format for displayed dates on your site
+  dateFormat = "02 Jan, 2006"  # Example: "02 Jan, 2006"
+
+  # Author details for site-wide use
+  [params.author]
+    email = 'e@mail.com'  # Your contact email
+    name = 'name'  # Your name for copyright and author info
+
+# =================================================================================
+# RSS Feed Generation: Control which pages get an RSS feed
+# Home and section pages will generate RSS feeds by default, but taxonomy/term pages are excluded.
+[outputs]
+  home = ['html', 'rss']  # RSS feed for the home page
+  section = ['html', 'rss']  # RSS feed for section pages
+  term = ['html']  # No RSS feed for taxonomy/term pages
